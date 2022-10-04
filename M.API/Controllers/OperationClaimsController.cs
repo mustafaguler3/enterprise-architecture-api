@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +16,11 @@ namespace M.API.Controllers
             _operationClaimService = operationClaimService;
         }
 
-
+        [HttpPost("add")]
+        public IActionResult Add(OperationClaim operationClaim)
+        {
+            _operationClaimService.Add(operationClaim);
+            return Ok();
+        }
     }
 }
