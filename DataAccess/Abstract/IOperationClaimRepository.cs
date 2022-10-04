@@ -4,15 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Data;
 
 namespace Entities.Abstract
 {
-    public interface IUserRepository
+    public interface IOperationClaimRepository : IEntityRepository<OperationClaim>
     {
-        void Add(User user);
-        void Update(User user);
-        void Delete(User user);
-        List<User> GetAll();
-        User Get(int id);
+        
     }
 }

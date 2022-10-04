@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Concrete
+namespace Entities
 {
-    public class OperationClaim
+    public class UserOperationClaim
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public int UserId { get; set; }
+
+        public int OperationClaimId { get; set; }
     }
 }
