@@ -1,3 +1,6 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Business.DependencyResolvers.Autofac;
 using DataAccess.Concrete.EntityFramework.Context;
 using Entities.Concrete.EntityFramework.Context;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +18,9 @@ builder.Services.AddDbContext<VtContext>(c =>
 {
     c.UseSqlServer(builder.Configuration.GetConnectionString("Local"));
 });
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+    .ConfigureContainer<ContainerBuilder>(i => i.RegisterModule(new BusinessModule()));
 
 var app = builder.Build();
 

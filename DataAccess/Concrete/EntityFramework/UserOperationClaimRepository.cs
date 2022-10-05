@@ -9,7 +9,7 @@ using DataAccess.Concrete.EntityFramework.Context;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class UserOperationClaim : EntityRepository<UserOperationClaim, VtContext>, IUserOperationClaim
+    public class UserOperationClaimRepository : EntityRepository<UserOperationClaimRepository, VtContext>, IUserOperationClaimRepository
     {
     }
 }

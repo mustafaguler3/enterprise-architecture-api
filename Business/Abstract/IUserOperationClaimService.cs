@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Core.Data;
 using Entities;
 
-namespace DataAccess.Abstract
+namespace Business.Abstract
 {
-    public interface IUserOperationClaim : IEntityRepository<UserOperationClaim>
+    public interface IUserOperationClaimService
     {
+        void Add(UserOperationClaim operationClaim);
     }
 }
