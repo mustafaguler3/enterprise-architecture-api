@@ -17,6 +17,7 @@ namespace M.API.Controllers
         {
             _authService = authService;
         }
+
         [HttpPost("register")]
         public IActionResult Register(RegisterAuthDto dto)
         {
